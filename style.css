@@ -202,9 +202,20 @@
   .work-head h2{font-size:clamp(30px,3.4vw,44px); font-weight:400;}
   .work-head p{color:var(--ink-dim); max-width:400px; font-size:15px;}
 
-  .project{
+  .work-hint{color:var(--ink-dim); font-size:14px; margin-bottom:24px;}
+  .project{border-top:1px solid var(--line);}
+  .project-summary{display:flex; align-items:center; gap:24px; padding:30px 0; cursor:pointer; list-style:none;}
+  .project-summary::-webkit-details-marker{display:none;}
+  .project-summary:focus-visible{outline:2px solid var(--accent); outline-offset:6px;}
+  .project-number{font-family:var(--mono); font-size:12px; color:var(--accent); flex-shrink:0;}
+  .project-summary h3{font-size:clamp(21px,2.4vw,30px); font-weight:500; line-height:1.3; flex:1; min-width:0;}
+  .project-category{font-family:var(--mono); font-size:11px; letter-spacing:.06em; color:var(--ink-dim); text-align:right;}
+  .project-toggle{font-family:var(--mono); font-size:26px; color:var(--accent); line-height:1; transition:transform .3s ease; flex-shrink:0;}
+  .project[open] .project-toggle{transform:rotate(45deg);}
+  .project-summary:hover h3{color:var(--accent);}
+  .project-content{
     display:grid; grid-template-columns:0.85fr 1.15fr; gap:64px;
-    padding:70px 0; border-top:1px solid var(--line);
+    padding:12px 0 48px;
     align-items:center;
   }
   .project:last-child{border-bottom:1px solid var(--line);}
@@ -265,13 +276,17 @@
 
   /* project images */
   .project-image{
-    width:100%; aspect-ratio:16/10.5; object-fit:cover; object-position:center;
+    width:100%; aspect-ratio:16/10.5; object-fit:cover; object-position:top;
     border:1px solid var(--line-strong); box-shadow:0 30px 60px -20px rgba(0,0,0,0.6);
     transition:transform .45s ease, box-shadow .45s ease;
   }
   .project:hover .project-image{transform:translateY(-6px); box-shadow:0 40px 80px -20px rgba(0,0,0,0.7);}
 
-  @media (max-width:900px){ .project{grid-template-columns:1fr; gap:36px;} }
+  @media (max-width:900px){ .project-content{grid-template-columns:1fr; gap:36px;} }
+  @media (max-width:560px){
+    .project-summary{gap:14px; flex-wrap:wrap; padding:24px 0;}
+    .project-category{order:4; width:100%; text-align:left; padding-left:30px;}
+  }
 
   /* ---------- EXPERIENCE ---------- */
   .exp-head h2{font-size:clamp(30px,3.4vw,44px); font-weight:400; margin-bottom:14px;}
