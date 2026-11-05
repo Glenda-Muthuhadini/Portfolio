@@ -12,12 +12,14 @@
 </head>
 <body>
 
-<nav class="nav">
+<nav class="nav" aria-label="Main navigation">
   <div class="nav-mark">GLENDA<span>·</span>MUTHUHADINI</div>
-  <div class="nav-links">
-    <a href="#work" data-nav="work">Work</a>
+  <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="main-navigation" hidden><span class="nav-toggle-label">Menu</span><span class="nav-toggle-icon" aria-hidden="true"><span></span><span></span></span></button>
+  <div class="nav-links" id="main-navigation">
     <a href="#about" data-nav="about">About</a>
     <a href="#approach" data-nav="approach">Approach</a>
+    <a href="#skills" data-nav="skills">Skills</a>
+    <a href="#work" data-nav="work">Work</a>
     <a href="#experience" data-nav="experience">Experience</a>
     <a href="#contact" data-nav="contact">Contact</a>
   </div>
@@ -137,7 +139,7 @@
 
     <p class="work-hint">Select a project to explore the details and visit the site.</p>
     <div class="project-list">
-    <details class="project">
+    <details class="project" name="portfolio-projects">
       <summary class="project-summary">
         <span class="project-number">01</span>
         <h3>Adelaide Wellness &amp; Spa</h3>
@@ -155,7 +157,7 @@
     </div>
     </details>
 
-    <details class="project">
+    <details class="project" name="portfolio-projects">
       <summary class="project-summary">
         <span class="project-number">02</span>
         <h3>Smart Apply</h3>
@@ -173,7 +175,7 @@
     </div>
     </details>
 
-    <details class="project">
+    <details class="project" name="portfolio-projects">
       <summary class="project-summary">
         <span class="project-number">03</span>
         <h3>YAMF</h3>
@@ -191,7 +193,7 @@
     </div>
     </details>
 
-    <details class="project">
+    <details class="project" name="portfolio-projects">
       <summary class="project-summary">
         <span class="project-number">04</span>
         <h3>Future Ready Africa</h3>
@@ -210,7 +212,7 @@
       </div>
     </details>
 
-    <details class="project">
+    <details class="project" name="portfolio-projects">
       <summary class="project-summary">
         <span class="project-number">05</span>
         <h3>Whimsy Co.</h3>
@@ -228,7 +230,7 @@
     </div>
     </details>
 
-    <details class="project">
+    <details class="project" name="portfolio-projects">
       <summary class="project-summary">
         <span class="project-number">06</span>
         <h3>Avha Creations</h3>
@@ -246,7 +248,7 @@
     </div>
     </details>
 
-    <details class="project">
+    <details class="project" name="portfolio-projects">
       <summary class="project-summary">
         <span class="project-number">07</span>
         <h3>Transformation Leader Events</h3>
@@ -265,7 +267,7 @@
     </div>
     </details>
 
-    <details class="project">
+    <details class="project" name="portfolio-projects">
       <summary class="project-summary">
         <span class="project-number">08</span>
         <h3>Student Trips SA</h3>
@@ -284,7 +286,7 @@
     </div>
     </details>
 
-    <details class="project">
+    <details class="project" name="portfolio-projects">
       <summary class="project-summary">
         <span class="project-number">09</span>
         <h3>Matwise World</h3>
@@ -303,7 +305,7 @@
     </div>
     </details>
 
-    <details class="project">
+    <details class="project" name="portfolio-projects">
       <summary class="project-summary">
         <span class="project-number">10</span>
         <h3>Hadini Holdings</h3>
@@ -322,7 +324,7 @@
     </div>
     </details>
 
-    <details class="project">
+    <details class="project" name="portfolio-projects">
       <summary class="project-summary">
         <span class="project-number">11</span>
         <h3>Daughters of Destiny</h3>
@@ -341,7 +343,7 @@
     </div>
     </details>
 
-    <details class="project">
+    <details class="project" name="portfolio-projects">
       <summary class="project-summary">
         <span class="project-number">12</span>
         <h3>Khathu082 NPC</h3>
